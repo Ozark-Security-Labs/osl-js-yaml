@@ -1,7 +1,7 @@
 {
-  "name": "js-yaml",
-  "version": "4.1.1",
-  "description": "YAML 1.2 parser and serializer",
+  "name": "osl-js-yaml",
+  "version": "0.0.1",
+  "description": "Ozark Security Labs internal fork of js-yaml — trimmed for use by Ozark products. See OZARK-NOTES.md.",
   "keywords": [
     "yaml",
     "parser",
@@ -15,7 +15,10 @@
     "Martin Grenfell <martin.grenfell@gmail.com> (http://got-ravings.blogspot.com)"
   ],
   "license": "MIT",
-  "repository": "nodeca/js-yaml",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ozark-Security-Labs/osl-js-yaml.git"
+  },
   "files": [
     "index.js",
     "lib/",
@@ -38,9 +41,7 @@
     "test": "npm run lint && mocha",
     "coverage": "npm run lint && nyc mocha && nyc report --reporter html",
     "demo": "npm run lint && node support/build_demo.js",
-    "gh-demo": "npm run demo && gh-pages -d demo -f",
-    "browserify": "rollup -c support/rollup.config.js",
-    "prepublishOnly": "npm run gh-demo"
+    "browserify": "rollup -c support/rollup.config.js"
   },
   "unpkg": "dist/js-yaml.min.js",
   "jsdelivr": "dist/js-yaml.min.js",
